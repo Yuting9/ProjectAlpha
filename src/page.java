@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class page {
@@ -13,6 +14,12 @@ public class page {
 	private static JTextField textField_2;
 	private static JTextField textField_3;
 	private static JTextField textField_4;
+	private static JTextField textField_5;
+	private static JTextField textField_6;
+	private static JTextField textField_7;
+	private static JTextField textField_8;
+	private static JTextField textField_9;
+	private static JTextField textField_10;
 	public static void main(String args[]){
 		game();
 	}
@@ -33,10 +40,6 @@ public class page {
 		frame.getContentPane().add(panel_1, BorderLayout.SOUTH);
 		
 		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
 		panel_1.add(btnSubmit);
 		
 		JButton btnCancel = new JButton("Cancel");
@@ -61,11 +64,11 @@ public class page {
 		
 		JComboBox raceCombo = new JComboBox();
 		raceCombo.setBounds(10, 36, 135, 20);
-		raceCombo.setToolTipText("choose[0] a race");
+		raceCombo.setToolTipText("Choose a race");
 		raceCombo.setModel(new DefaultComboBoxModel(new String[] {"   ","Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"}));
 		panel_2.add(raceCombo);
 		
-		JLabel lblAlignment = new JLabel("choose[0] Alignment");
+		JLabel lblAlignment = new JLabel("Choose Alignment");
 		lblAlignment.setBounds(454, 9, 116, 19);
 		lblAlignment.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
@@ -89,7 +92,7 @@ public class page {
 					lblAlignment.setText(id+" "+al);
 				}
 				else{
-					lblAlignment.setText("choose[0] Alignment");
+					lblAlignment.setText("Choose Alignment");
 				}
 			}
 		});
@@ -103,7 +106,7 @@ public class page {
 					lblAlignment.setText(id+" "+al);
 				}
 				else{
-					lblAlignment.setText("choose[0] Alignment");
+					lblAlignment.setText("Choose Alignment");
 				}
 			}
 		});
@@ -125,9 +128,9 @@ public class page {
 		DefaultComboBoxModel dgb = new DefaultComboBoxModel(new String[] {"Black", "Blue", "Brass", "Bronze", "Copper",
 																		  "Gold", "Green", "Red", "Silver", "White"});
 		DefaultComboBoxModel gnm = new DefaultComboBoxModel(new String[] {"Forest Gnome", "Rock Gnome", "Deep Gnome"});
-		DefaultComboBoxModel hlf = new DefaultComboBoxModel(new String[] {"N/A"});
-		DefaultComboBoxModel hor = new DefaultComboBoxModel(new String[] {"N/A"});
-		DefaultComboBoxModel tie = new DefaultComboBoxModel(new String[] {"N/A"});
+		DefaultComboBoxModel hlf = new DefaultComboBoxModel(new String[] {"Half-Elf"});
+		DefaultComboBoxModel hor = new DefaultComboBoxModel(new String[] {"Half-Orc"});
+		DefaultComboBoxModel tie = new DefaultComboBoxModel(new String[] {"Tiefling"});
 		
 		JComboBox subCombo = new JComboBox();
 		subCombo.setBounds(10, 62, 135, 20);
@@ -200,6 +203,66 @@ public class page {
 		textField_4.setBounds(10, 226, 86, 20);
 		textField_4.setColumns(10);
 		panel_2.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(301, 242, 86, 20);
+		panel_2.add(textField_5);
+		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(301, 211, 86, 20);
+		panel_2.add(textField_6);
+		textField_6.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(301, 179, 86, 20);
+		panel_2.add(textField_7);
+		textField_7.setColumns(10);
+		
+		textField_8 = new JTextField();
+		textField_8.setBounds(301, 148, 86, 20);
+		panel_2.add(textField_8);
+		textField_8.setColumns(10);
+		
+		textField_9 = new JTextField();
+		textField_9.setBounds(301, 122, 86, 20);
+		panel_2.add(textField_9);
+		textField_9.setColumns(10);
+		
+		JLabel lblCopper = new JLabel("Copper");
+		lblCopper.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCopper.setBounds(230, 120, 61, 19);
+		panel_2.add(lblCopper);
+		
+		JLabel lblSilver = new JLabel("Silver");
+		lblSilver.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblSilver.setBounds(230, 151, 61, 19);
+		panel_2.add(lblSilver);
+		
+		JLabel lblElectrum = new JLabel("Electrum");
+		lblElectrum.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblElectrum.setBounds(230, 178, 61, 19);
+		panel_2.add(lblElectrum);
+		
+		JLabel lblGold = new JLabel("Gold");
+		lblGold.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblGold.setBounds(230, 210, 61, 19);
+		panel_2.add(lblGold);
+		
+		JLabel lblPlatinum = new JLabel("Platinum");
+		lblPlatinum.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPlatinum.setBounds(230, 243, 61, 19);
+		panel_2.add(lblPlatinum);
+		
+		textField_10 = new JTextField();
+		textField_10.setBounds(260, 36, 86, 20);
+		panel_2.add(textField_10);
+		textField_10.setColumns(10);
+		
+		JLabel lblLevel = new JLabel("Level");
+		lblLevel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblLevel.setBounds(359, 37, 61, 19);
+		panel_2.add(lblLevel);
 		
 		raceCombo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -466,8 +529,9 @@ public class page {
 		comboBox.setBounds(10, 286, 81, 20);
 		panel_3.add(comboBox);
 		
-		JLabel lblChoose = new JLabel("Choose");
-		lblChoose.setBounds(412, 374, 46, 14);
+		JLabel lblChoose = new JLabel("Choose a Class");
+		lblChoose.setHorizontalAlignment(SwingConstants.CENTER);
+		lblChoose.setBounds(412, 374, 171, 14);
 		panel_3.add(lblChoose);
 		
 		int[] choose = new int[1];
@@ -5388,7 +5452,48 @@ public class page {
 		JPanel panel_4 = new JPanel();
 		tabbedPane.addTab("Details", null, panel_4, null);
 		
-		
+		ArrayList<String> skills = new ArrayList<String>();
+		if(rdBtnAcrobatics.isSelected())
+			skills.add(rdBtnAcrobatics.getText());
+		if(rdBtnAnimalH.isSelected())
+			skills.add(rdBtnAnimalH.getText());
+		if(rdBtnArcana.isSelected())
+			skills.add(rdBtnArcana.getText());
+		if(rdBtnAthletics.isSelected())
+			skills.add(rdBtnAthletics.getText());
+		if(rdBtnDeception.isSelected())
+			skills.add(rdBtnDeception.getText());
+		if(rdBtnHistory.isSelected())
+			skills.add(rdBtnHistory.getText());
+		if(rdBtnInsight.isSelected())
+			skills.add(rdBtnInsight.getText());
+		if(rdBtnIntimidation.isSelected())
+			skills.add(rdBtnIntimidation.getText());
+		if(rdBtnInvestigation.isSelected())
+			skills.add(rdBtnInvestigation.getText());
+		if(rdBtnMedicine.isSelected())
+			skills.add(rdBtnMedicine.getText());
+		if(rdBtnNature.isSelected())
+			skills.add(rdBtnNature.getText());
+		if(rdBtnPerception.isSelected())
+			skills.add(rdBtnPerception.getText());
+		if(rdBtnPerform.isSelected())
+			skills.add(rdBtnPerform.getText());
+		if(rdBtnPersuasion.isSelected())
+			skills.add(rdBtnPersuasion.getText());
+		if(rdBtnReligion.isSelected())
+			skills.add(rdBtnReligion.getText());
+		if(rdBtnSlightOfHand.isSelected())
+			skills.add(rdBtnSlightOfHand.getText());
+		if(rdBtnStealth.isSelected())
+			skills.add(rdBtnStealth.getText());
+		if(rdBtnSurvival.isSelected())
+			skills.add(rdBtnSurvival.getText());
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Character chract = new Character(comboBox.getSelectedItem(), subCombo.getSelectedItem(), txtName.getText(), textField.getText(), textField_1.getText(), textField_2.getText(), textField_3.getText(), textField_4.getText(), textArea.getText(), lblAlignment.getText(), [textField_9.getText(),textField_8.getText(),textField_7.getText(),textField_6.getText(),textField_5.getText()], skills);
+			}
+		});
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
