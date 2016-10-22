@@ -273,10 +273,11 @@ public class page {
 		tabbedPane.addTab("Attributes", null, panel_3, null);
 		panel_3.setLayout(null);
 		
-		int str, dex, con, intl, wis, chr, pts = 47;
+		int str = 0, dex, con, intl, wis, chr, pts = 47;
 		
 		JTextPane textPane = new JTextPane();
 		textPane.setEditable(false);
+		textPane.setText(Integer.toString(str));
 		textPane.setBounds(59, 11, 31, 26);
 		panel_3.add(textPane);
 		
@@ -288,7 +289,7 @@ public class page {
 		btnUp.setBounds(89, 11, 50, 26);
 		panel_3.add(btnUp);
 		
-		JButton button = new JButton("\u25B2");
+		JButton button = new JButton("▼");
 		button.setBounds(10, 11, 50, 26);
 		panel_3.add(button);
 		
