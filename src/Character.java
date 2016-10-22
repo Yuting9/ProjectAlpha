@@ -10,8 +10,8 @@ public class Character {
   //globals
   private String race, char_class, name, eye, hair, skin, height, weight, biography, alignment;
   private int level, strength, dexterity, constitution, intelligence, wisdom, charisma;
-  private ArrayList[7] inventory;
-  FileInputStream in =null;
+  ArrayList<ArrayList<String>> inventory = new ArrayList<ArrayList<String>>();
+  FileInputStream in = null;
   
   //constructor
   public Character(String char_class, String race, String name, String eye, String hair, String skin, String weight, String biography, String alignment) {
@@ -23,7 +23,7 @@ public class Character {
     this.skin = skin;
     this.weight = weight;
     this.biography = biography;
-    
+    this.alignment = alignment;
     level = 1;
     strength = 8;
     dexterity = 8;
@@ -35,15 +35,15 @@ public class Character {
   //load
   public Character(String filename)
   {
-    String thisLine = null;
+    BufferedReader br = null;
     
     try{
-      BufferedReader br = new BufferedReader(filename+".txt");
+      br = new BufferedReader(new FileReader(filename+".txt"));
     }catch(Exception e){
       e.printStackTrace();
     }
     
-    this.name=br.readLine();
+    this.name= br.readLine();
     this.char_class=br.readLine();
     this.race = br.readLine();
     this.level=Integer.parseInt(br.readLine());
@@ -73,15 +73,7 @@ public class Character {
     
   }
   
-  public String readFile(){
-    char c;
-    String ans;
-    while ((c = in.read()) != '\n'){
-      ans+=c;
-    }
-    return ans;
-  }
-  
+
   //getters
   public ArrayList get_inventory(){
     return inventory;
