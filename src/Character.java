@@ -1,5 +1,9 @@
 /**
  * Class for each character
+ * 
+ * notes:
+ * inventory is ordered like this: <armor and sheilds, weapons,gear, tools, mounts, trinkets>
+ * wealth is ordered like this: [copper, silver, electrum, gold, platinum]
  */
 
 //imports
@@ -253,5 +257,102 @@ public class Character {
   }
   public void set_backstory(String backstory){
     this.backstory = backstory;
+  }
+  
+  //edit functions
+  //get set armornsheilds
+  public ArrayList<String> get_ArmorNSheilds()
+  {
+    return inventory.get(0);
+  }
+  
+  public void set_ArmorNSheilds(ArrayList<String> armor)
+  {
+    inventory.set(0,armor);
+  }
+  
+  
+  //get set weapons
+  public ArrayList<String> get_weapons()
+  {
+    return inventory.get(1);
+  }
+  
+  public void set_weapons(ArrayList<String> weapons)
+  {
+    inventory.set(1,weapons);
+  }
+  
+  //get set gear
+  public ArrayList<String> get_gear()
+  {
+    return inventory.get(2);
+  }
+  public void set_gear(ArrayList<String> gear)
+  {
+    inventory.set(2,gear);
+  }
+  
+  //get set tools
+  public ArrayList<String> get_tools()
+  {
+    return inventory.get(3);
+  }
+  public void set_tools(ArrayList<String> tools)
+  {
+    inventory.set(3,tools);
+  }
+    
+  //get set mounts
+  public ArrayList<String> get_mounts()
+  {
+    return inventory.get(4);
+  }
+  
+  public void set_mounts(ArrayList<String> mounts)
+  {
+    inventory.set(4,mounts);
+  }
+  
+  //get set trinkets
+  public ArrayList<String> get_trinkets()
+  {
+    return inventory.get(5);
+  }
+  public void set_trinkets(ArrayList<String> trinkets)
+  {
+    inventory.set(5,trinkets);
+  }
+  //get set wealth
+  
+  public int get_copper(){
+    return wealth[0];
+  }
+  public int get_silver(){
+    return wealth[1];
+  }
+  public int get_electrum(){
+    return wealth[2];
+  }
+  public int get_gold(){
+    return wealth[3];
+  }
+  public int get_platinum(){
+    return wealth[4];
+  }
+  public void set_copper(int monies){
+    this.wealth[0]=monies;
+  }
+  public void set_silver(int monies){
+    this.wealth[1]=monies;
+  }
+  public void set_electrum(int monies){
+    this.wealth[2]=monies;
+  }
+  public void set_gold(int monies){
+    this.wealth[3]=monies;
+  }
+  public void set_platinum(int monies){
+    this.wealth[4]=monies;
   }
 }
