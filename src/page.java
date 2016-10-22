@@ -449,22 +449,26 @@ public class page {
 		rdBtnReligion.setEnabled(false);
 		panel_5.add(rdBtnReligion);
 		
-		JRadioButton rdbtnSlightOfHand = new JRadioButton("Slight of Hand");
-		rdbtnSlightOfHand.setEnabled(false);
-		panel_5.add(rdbtnSlightOfHand);
+		JRadioButton rdBtnSlightOfHand = new JRadioButton("Slight of Hand");
+		rdBtnSlightOfHand.setEnabled(false);
+		panel_5.add(rdBtnSlightOfHand);
 		
-		JRadioButton rdbtnStealth = new JRadioButton("Stealth");
-		rdbtnStealth.setEnabled(false);
-		panel_5.add(rdbtnStealth);
+		JRadioButton rdBtnStealth = new JRadioButton("Stealth");
+		rdBtnStealth.setEnabled(false);
+		panel_5.add(rdBtnStealth);
 		
-		JRadioButton rdbtnSurvival = new JRadioButton("Survival");
-		rdbtnSurvival.setEnabled(false);
-		panel_5.add(rdbtnSurvival);
+		JRadioButton rdBtnSurvival = new JRadioButton("Survival");
+		rdBtnSurvival.setEnabled(false);
+		panel_5.add(rdBtnSurvival);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Class","Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"}));
 		comboBox.setBounds(10, 286, 81, 20);
 		panel_3.add(comboBox);
+		
+		JLabel lblChoose = new JLabel("Choose");
+		lblChoose.setBounds(412, 374, 46, 14);
+		panel_3.add(lblChoose);
 		
 		int[] choose = new int[1];
 		comboBox.addActionListener(new ActionListener() {
@@ -485,9 +489,9 @@ public class page {
 				rdBtnPerform.setSelected(false);
 				rdBtnPersuasion.setSelected(false);
 				rdBtnReligion.setSelected(false);
-				rdbtnSlightOfHand.setSelected(false);
-				rdbtnStealth.setSelected(false);
-				rdbtnSurvival.setSelected(false);
+				rdBtnSlightOfHand.setSelected(false);
+				rdBtnStealth.setSelected(false);
+				rdBtnSurvival.setSelected(false);
 				rdBtnAcrobatics.setEnabled(false);
 				rdBtnAnimalH.setEnabled(false);
 				rdBtnArcana.setEnabled(false);
@@ -503,9 +507,9 @@ public class page {
 				rdBtnPerform.setEnabled(false);
 				rdBtnPersuasion.setEnabled(false);
 				rdBtnReligion.setEnabled(false);
-				rdbtnSlightOfHand.setEnabled(false);
-				rdbtnStealth.setEnabled(false);
-				rdbtnSurvival.setEnabled(false);
+				rdBtnSlightOfHand.setEnabled(false);
+				rdBtnStealth.setEnabled(false);
+				rdBtnSurvival.setEnabled(false);
 				switch(what){
 				case "Barbarian":
 					rdBtnAcrobatics.setEnabled(false);
@@ -523,9 +527,9 @@ public class page {
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
 					rdBtnReligion.setEnabled(false);
-					rdbtnSlightOfHand.setEnabled(false);
-					rdbtnStealth.setEnabled(false);
-					rdbtnSurvival.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Bard":
@@ -544,9 +548,9 @@ public class page {
 					rdBtnPerform.setEnabled(true);
 					rdBtnPersuasion.setEnabled(true);
 					rdBtnReligion.setEnabled(true);
-					rdbtnSlightOfHand.setEnabled(true);
-					rdbtnStealth.setEnabled(true);
-					rdbtnSurvival.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
 					choose[0] = 3;
 					break;
 				case "Cleric":
@@ -565,9 +569,9 @@ public class page {
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
 					rdBtnReligion.setEnabled(true);
-					rdbtnSlightOfHand.setEnabled(false);
-					rdbtnStealth.setEnabled(false);
-					rdbtnSurvival.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
 					choose[0] = 2;
 					break;
 				case "Druid":
@@ -586,9 +590,9 @@ public class page {
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
 					rdBtnReligion.setEnabled(true);
-					rdbtnSlightOfHand.setEnabled(false);
-					rdbtnStealth.setEnabled(false);
-					rdbtnSurvival.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Fighter":
@@ -599,7 +603,7 @@ public class page {
 					rdBtnInsight.setEnabled(true);
 					rdBtnIntimidation.setEnabled(true);
 					rdBtnPerception.setEnabled(true);
-					rdbtnSurvival.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Monk":
@@ -608,7 +612,7 @@ public class page {
 					rdBtnHistory.setEnabled(true);
 					rdBtnInsight.setEnabled(true);
 					rdBtnReligion.setEnabled(true);
-					rdbtnStealth.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Paladin":
@@ -627,8 +631,8 @@ public class page {
 					rdBtnInvestigation.setEnabled(false);
 					rdBtnNature.setEnabled(true);
 					rdBtnPerception.setEnabled(true);
-					rdbtnStealth.setEnabled(true);
-					rdbtnSurvival.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
 					choose[0] = 3;
 					break;
 				case "Rogue":
@@ -638,8 +642,8 @@ public class page {
 					rdBtnInsight.setEnabled(true);
 					rdBtnIntimidation.setEnabled(true);
 					rdBtnPerception.setEnabled(true);
-					rdbtnSlightOfHand.setEnabled(true);
-					rdbtnStealth.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
 					choose[0] = 4;
 					break;
 				case "Sorcerer":
@@ -674,6 +678,4489 @@ public class page {
 					choose[0] = 0;
 					break;
 				}
+				lblChoose.setText("Choose " + choose[0] + " skills");
+			}
+		});
+
+		rdBtnAcrobatics.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+			}
+		});
+		rdBtnAnimalH.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnArcana.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnAthletics.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnDeception.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnHistory.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnInsight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnIntimidation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnInvestigation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnMedicine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnNature.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnPerception.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnPerform.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnPersuasion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnReligion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnSlightOfHand.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnStealth.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
+			}
+		});
+		rdBtnSurvival.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int chosen = 0;
+				if(rdBtnAcrobatics.isSelected())
+					chosen++;
+				if(rdBtnAnimalH.isSelected())
+					chosen++;
+				if(rdBtnArcana.isSelected())
+					chosen++;
+				if(rdBtnAthletics.isSelected())
+					chosen++;
+				if(rdBtnDeception.isSelected())
+					chosen++;
+				if(rdBtnHistory.isSelected())
+					chosen++;
+				if(rdBtnInsight.isSelected())
+					chosen++;
+				if(rdBtnIntimidation.isSelected())
+					chosen++;
+				if(rdBtnInvestigation.isSelected())
+					chosen++;
+				if(rdBtnMedicine.isSelected())
+					chosen++;
+				if(rdBtnNature.isSelected())
+					chosen++;
+				if(rdBtnPerception.isSelected())
+					chosen++;
+				if(rdBtnPerform.isSelected())
+					chosen++;
+				if(rdBtnPersuasion.isSelected())
+					chosen++;
+				if(rdBtnReligion.isSelected())
+					chosen++;
+				if(rdBtnSlightOfHand.isSelected())
+					chosen++;
+				if(rdBtnStealth.isSelected())
+					chosen++;
+				if(rdBtnSurvival.isSelected())
+					chosen++;
+				if(chosen == choose[0]){
+					if(!rdBtnAcrobatics.isSelected())
+						rdBtnAcrobatics.setEnabled(false);
+					if(!rdBtnAnimalH.isSelected())
+						rdBtnAnimalH.setEnabled(false);
+					if(!rdBtnArcana.isSelected())
+						rdBtnArcana.setEnabled(false);
+					if(!rdBtnAthletics.isSelected())
+						rdBtnAthletics.setEnabled(false);
+					if(!rdBtnDeception.isSelected())
+						rdBtnDeception.setEnabled(false);
+					if(!rdBtnHistory.isSelected())
+						rdBtnHistory.setEnabled(false);
+					if(!rdBtnInsight.isSelected())
+						rdBtnInsight.setEnabled(false);
+					if(!rdBtnIntimidation.isSelected())
+						rdBtnIntimidation.setEnabled(false);
+					if(!rdBtnInvestigation.isSelected())
+						rdBtnInvestigation.setEnabled(false);
+					if(!rdBtnMedicine.isSelected())
+						rdBtnMedicine.setEnabled(false);
+					if(!rdBtnNature.isSelected())
+						rdBtnNature.setEnabled(false);
+					if(!rdBtnPerception.isSelected())
+						rdBtnPerception.setEnabled(false);
+					if(!rdBtnPerform.isSelected())
+						rdBtnPerform.setEnabled(false);
+					if(!rdBtnPersuasion.isSelected())
+						rdBtnPersuasion.setEnabled(false);
+					if(!rdBtnReligion.isSelected())
+						rdBtnReligion.setEnabled(false);
+					if(!rdBtnSlightOfHand.isSelected())
+						rdBtnSlightOfHand.setEnabled(false);
+					if(!rdBtnStealth.isSelected())
+						rdBtnStealth.setEnabled(false);
+					if(!rdBtnSurvival.isSelected())
+						rdBtnSurvival.setEnabled(false);
+				}
+				else{switch((String)comboBox.getSelectedItem()){
+				case "Barbarian":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(false);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Bard":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Cleric":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(false);
+					rdBtnArcana.setEnabled(false);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(false);
+					rdBtnPerception.setEnabled(false);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(false);
+					choose[0] = 2;
+					break;
+				case "Druid":
+					rdBtnAcrobatics.setEnabled(false);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnArcana.setEnabled(true);
+					rdBtnAthletics.setEnabled(false);
+					rdBtnDeception.setEnabled(false);
+					rdBtnHistory.setEnabled(false);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(false);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnPerform.setEnabled(false);
+					rdBtnPersuasion.setEnabled(false);
+					rdBtnReligion.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(false);
+					rdBtnStealth.setEnabled(false);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Fighter":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Monk":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Paladin":
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Ranger":
+					rdBtnAnimalH.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(false);
+					rdBtnNature.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					rdBtnSurvival.setEnabled(true);
+					choose[0] = 3;
+					break;
+				case "Rogue":
+					rdBtnAcrobatics.setEnabled(true);
+					rdBtnAthletics.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPerception.setEnabled(true);
+					rdBtnSlightOfHand.setEnabled(true);
+					rdBtnStealth.setEnabled(true);
+					choose[0] = 4;
+					break;
+				case "Sorcerer":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnPersuasion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Warlock":
+					rdBtnArcana.setEnabled(true);
+					rdBtnDeception.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnIntimidation.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnNature.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
+				}
+				}
+				
 			}
 		});
 		
