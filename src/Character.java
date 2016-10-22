@@ -21,8 +21,8 @@ public class Character {
   FileInputStream in = null;
   
   //constructor
-  public Character(String char_class, String race, String name, String eye, String hair, String skin, String weight, 
-                   String biography, String alignment, String backstory, int[] wealth, int health, 
+  public Character(String char_class, String race, String name, String eye, String hair, String skin,String height, String weight, 
+                   String biography, String alignment, int[] wealth, int health, 
                    ArrayList<String> skills) {
     this.name = name;
     this.char_class=char_class;
@@ -30,10 +30,11 @@ public class Character {
     this.eye = eye;
     this.hair = hair;
     this.skin = skin;
+    this.height = height;
     this.weight = weight;
     this.biography = biography;
     this.alignment = alignment;
-    this.backstory = backstory;
+    //this.backstory = backstory;
     this.health = health;
     level = 1;
     strength = 8;
@@ -65,8 +66,10 @@ public class Character {
       this.eye= br.readLine();
       this.hair = br.readLine();
       this.skin = br.readLine();
+      this.height = br.readLine();
+      this.weight = br.readLine();
       this.alignment = br.readLine();
-      this.backstory = br.readLine();
+      //this.backstory = br.readLine();
       this.level=Integer.parseInt(br.readLine());
       this.strength= Integer.parseInt(br.readLine());
       this.dexterity=Integer.parseInt(br.readLine());
@@ -112,8 +115,10 @@ public class Character {
     outFile.println(this.eye);
     outFile.println(this.hair);
     outFile.println(this.skin);
+    outFile.println(this.height);
+    outFile.println(this.weight);
     outFile.println(this.alignment);
-    outFile.println(this.backstory);
+    //outFile.println(this.backstory);
     outFile.println(this.level);
     outFile.println(this.strength);
     outFile.println(this.dexterity);
@@ -152,6 +157,12 @@ public class Character {
   }
   public int get_level(){
     return level;
+  }
+  public String get_weight(){
+    return weight;
+  }
+  public String get_height(){
+    return height;
   }
   public int get_strength(){
     return strength;
@@ -217,6 +228,12 @@ public class Character {
   }
   public void set_dexterity(int dexterity){
     this.dexterity=dexterity;
+  }
+  public void set_height(String height){
+    this.height=height;
+  }
+  public void set_weight(String weight){
+    this.weight=weight;
   }
   public void set_constitution(int constitution){
     this.constitution=constitution;
