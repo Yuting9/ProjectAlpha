@@ -254,11 +254,11 @@ public class page {
 		textPane.setBounds(10, 110, 53, 26);
 		panel_3.add(textPane);
 		
-		JButton btnUp = new JButton("▲");
+		JButton btnUp = new JButton("+");
 		btnUp.setBounds(10, 84, 53, 28);
 		panel_3.add(btnUp);
 		
-		JButton button_0 = new JButton("▼");
+		JButton button_0 = new JButton("-");
 		button_0.setBounds(10, 135, 53, 26);
 		panel_3.add(button_0);
 		
@@ -284,7 +284,7 @@ public class page {
 		lblDexterity.setBounds(193, 110, 67, 26);
 		panel_3.add(lblDexterity);
 		
-		JButton button_1 = new JButton("▲");
+		JButton button_1 = new JButton("+");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -299,7 +299,7 @@ public class page {
 		textPane_2.setBounds(140, 110, 53, 26);
 		panel_3.add(textPane_2);
 		
-		JButton button_2 = new JButton("▼");
+		JButton button_2 = new JButton("-");
 		button_2.setBounds(140, 135, 53, 26);
 		panel_3.add(button_2);
 		
@@ -308,7 +308,7 @@ public class page {
 		lblConstitution.setBounds(323, 110, 81, 26);
 		panel_3.add(lblConstitution);
 		
-		JButton button_3 = new JButton("▲");
+		JButton button_3 = new JButton("+");
 		button_3.setBounds(270, 84, 53, 28);
 		panel_3.add(button_3);
 		
@@ -319,7 +319,7 @@ public class page {
 		textPane_3.setBounds(270, 110, 53, 26);
 		panel_3.add(textPane_3);
 		
-		JButton button_4 = new JButton("▼");
+		JButton button_4 = new JButton("-");
 		button_4.setBounds(270, 135, 53, 26);
 		panel_3.add(button_4);
 		
@@ -328,7 +328,7 @@ public class page {
 		lblIntelligence.setBounds(63, 203, 81, 26);
 		panel_3.add(lblIntelligence);
 		
-		JButton button_5 = new JButton("▲");
+		JButton button_5 = new JButton("+");
 		button_5.setBounds(10, 177, 53, 28);
 		panel_3.add(button_5);
 		
@@ -339,11 +339,11 @@ public class page {
 		textPane_4.setBounds(10, 203, 53, 26);
 		panel_3.add(textPane_4);
 		
-		JButton button_6 = new JButton("▼");
+		JButton button_6 = new JButton("-");
 		button_6.setBounds(10, 228, 53, 26);
 		panel_3.add(button_6);
 		
-		JButton button_7 = new JButton("▲");
+		JButton button_7 = new JButton("+");
 		button_7.setBounds(140, 177, 53, 28);
 		panel_3.add(button_7);
 		
@@ -354,7 +354,7 @@ public class page {
 		textPane_5.setBounds(140, 203, 53, 26);
 		panel_3.add(textPane_5);
 		
-		JButton button_8 = new JButton("▼");
+		JButton button_8 = new JButton("-");
 		button_8.setBounds(140, 228, 53, 26);
 		panel_3.add(button_8);
 		
@@ -363,7 +363,7 @@ public class page {
 		lblWisdom.setBounds(193, 203, 81, 26);
 		panel_3.add(lblWisdom);
 		
-		JButton button_9 = new JButton("▲");
+		JButton button_9 = new JButton("+");
 		button_9.setBounds(270, 177, 53, 28);
 		panel_3.add(button_9);
 		
@@ -374,7 +374,7 @@ public class page {
 		textPane_6.setBounds(270, 203, 53, 26);
 		panel_3.add(textPane_6);
 		
-		JButton button_10 = new JButton("▼");
+		JButton button_10 = new JButton("-");
 		button_10.setBounds(270, 228, 53, 26);
 		panel_3.add(button_10);
 		
