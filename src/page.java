@@ -59,23 +59,23 @@ public class page {
 		lblName.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblName);
 		
-		JComboBox classCombo = new JComboBox();
-		classCombo.setBounds(10, 36, 135, 20);
-		classCombo.setToolTipText("Choose a race");
-		classCombo.setModel(new DefaultComboBoxModel(new String[] {"   ","Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"}));
-		panel_2.add(classCombo);
+		JComboBox raceCombo = new JComboBox();
+		raceCombo.setBounds(10, 36, 135, 20);
+		raceCombo.setToolTipText("Choose a race");
+		raceCombo.setModel(new DefaultComboBoxModel(new String[] {"   ","Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"}));
+		panel_2.add(raceCombo);
 		
 		JLabel lblAlignment = new JLabel("Choose Alignment");
-		lblAlignment.setBounds(489, 9, 116, 19);
+		lblAlignment.setBounds(454, 9, 116, 19);
 		lblAlignment.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
 		JComboBox combo1 = new JComboBox();
-		combo1.setBounds(279, 10, 95, 20);
+		combo1.setBounds(250, 10, 95, 20);
 		combo1.setModel(new DefaultComboBoxModel(new String[] {"--Ideals","Lawful", "Neutral", "Chaotic"}));
 		panel_2.add(combo1);
 		
 		JComboBox combo2 = new JComboBox();
-		combo2.setBounds(384, 10, 95, 20);
+		combo2.setBounds(349, 10, 95, 20);
 		combo2.setModel(new DefaultComboBoxModel(new String[] {"--Morals","Good", "Neutral", "Evil"}));
 		panel_2.add(combo2);
 		
@@ -110,10 +110,10 @@ public class page {
 		panel_2.add(lblAlignment);
 		
 		
-		JLabel lblClass = new JLabel("Class");
-		lblClass.setBounds(155, 35, 33, 19);
-		lblClass.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		panel_2.add(lblClass);
+		JLabel lblRace = new JLabel("Race");
+		lblRace.setBounds(155, 35, 33, 19);
+		lblRace.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		panel_2.add(lblRace);
 		
 		DefaultComboBoxModel def = new DefaultComboBoxModel(new String[] {"N/A"});
 		DefaultComboBoxModel dwr = new DefaultComboBoxModel(new String[] {"Hill Dwarf", "Mountain Dwarf"});
@@ -134,10 +134,10 @@ public class page {
 		subCombo.setModel(def);
 		panel_2.add(subCombo);
 		
-		JLabel lblSubclass = new JLabel("Subclass");
-		lblSubclass.setBounds(157, 61, 55, 19);
-		lblSubclass.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		panel_2.add(lblSubclass);
+		JLabel lblsubRace = new JLabel("Subrace");
+		lblsubRace.setBounds(157, 61, 55, 19);
+		lblsubRace.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		panel_2.add(lblsubRace);
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setLineWrap(true);
@@ -201,9 +201,9 @@ public class page {
 		textField_4.setColumns(10);
 		panel_2.add(textField_4);
 		
-		classCombo.addActionListener(new ActionListener() {
+		raceCombo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String id = (String) classCombo.getSelectedItem();
+				String id = (String) raceCombo.getSelectedItem();
 				switch(id){
 				case "Dwarf":
 					subCombo.setModel(dwr);
@@ -461,6 +461,16 @@ public class page {
 		rdbtnSurvival.setEnabled(false);
 		panel_5.add(rdbtnSurvival);
 		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Class","Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"}));
+		comboBox.setBounds(10, 286, 81, 20);
+		panel_3.add(comboBox);
+		
+		String what = (String)comboBox.getSelectedItem();
+		switch(what){
+		case "Barbarian":		
+		
+		}
 		
 		btnUp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
