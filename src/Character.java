@@ -39,26 +39,32 @@ public class Character {
     
     try{
       br = new BufferedReader(new FileReader(filename+".txt"));
+      this.name= br.readLine();
+      this.char_class=br.readLine();
+      this.race = br.readLine();
+      this.level=Integer.parseInt(br.readLine());
+      this.strength= Integer.parseInt(br.readLine());
+      this.dexterity=Integer.parseInt(br.readLine());
+      this.constitution=Integer.parseInt(br.readLine());
+      this.intelligence=Integer.parseInt(br.readLine());
+      this.wisdom=Integer.parseInt(br.readLine());
+      this.charisma=Integer.parseInt(br.readLine());
     }catch(Exception e){
       e.printStackTrace();
     }
     
-    this.name= br.readLine();
-    this.char_class=br.readLine();
-    this.race = br.readLine();
-    this.level=Integer.parseInt(br.readLine());
-    this.strength= Integer.parseInt(br.readLine());
-    this.dexterity=Integer.parseInt(br.readLine());
-    this.constitution=Integer.parseInt(br.readLine());
-    this.intelligence=Integer.parseInt(br.readLine());
-    this.wisdom=Integer.parseInt(br.readLine());
-    this.charisma=Integer.parseInt(br.readLine());
+
   }
   
   public void save(String filename){
     File out =new File(filename+".txt");
+    PrintWriter outFile =null;
+    try{
     out.createNewFile();
-    PrintWriter outFile = new PrintWriter(out);
+    outFile = new PrintWriter(out);
+    }catch(Exception e){
+      e.printStackTrace();
+    }
     outFile.println(this.name);
     outFile.println(this.char_class);
     outFile.println(this.race);
