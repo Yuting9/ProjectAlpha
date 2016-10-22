@@ -5,9 +5,10 @@ import java.awt.event.ActionEvent;
 
 public class page {
 	public static void main(String args[]){
-		game()
+		game();
 	}
-	public static game(){
-		s
+	public static void game(){
+		JFrame frame = new JFrame();
+		
 	}
 }
