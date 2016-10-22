@@ -445,9 +445,9 @@ public class page {
 		rdBtnPersuasion.setEnabled(false);
 		panel_5.add(rdBtnPersuasion);
 		
-		JRadioButton rdbtnReligion = new JRadioButton("Religion");
-		rdbtnReligion.setEnabled(false);
-		panel_5.add(rdbtnReligion);
+		JRadioButton rdBtnReligion = new JRadioButton("Religion");
+		rdBtnReligion.setEnabled(false);
+		panel_5.add(rdBtnReligion);
 		
 		JRadioButton rdbtnSlightOfHand = new JRadioButton("Slight of Hand");
 		rdbtnSlightOfHand.setEnabled(false);
@@ -484,7 +484,7 @@ public class page {
 				rdBtnPerception.setSelected(false);
 				rdBtnPerform.setSelected(false);
 				rdBtnPersuasion.setSelected(false);
-				rdbtnReligion.setSelected(false);
+				rdBtnReligion.setSelected(false);
 				rdbtnSlightOfHand.setSelected(false);
 				rdbtnStealth.setSelected(false);
 				rdbtnSurvival.setSelected(false);
@@ -502,7 +502,7 @@ public class page {
 				rdBtnPerception.setEnabled(false);
 				rdBtnPerform.setEnabled(false);
 				rdBtnPersuasion.setEnabled(false);
-				rdbtnReligion.setEnabled(false);
+				rdBtnReligion.setEnabled(false);
 				rdbtnSlightOfHand.setEnabled(false);
 				rdbtnStealth.setEnabled(false);
 				rdbtnSurvival.setEnabled(false);
@@ -522,7 +522,7 @@ public class page {
 					rdBtnPerception.setEnabled(true);
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
-					rdbtnReligion.setEnabled(false);
+					rdBtnReligion.setEnabled(false);
 					rdbtnSlightOfHand.setEnabled(false);
 					rdbtnStealth.setEnabled(false);
 					rdbtnSurvival.setEnabled(true);
@@ -543,7 +543,7 @@ public class page {
 					rdBtnPerception.setEnabled(true);
 					rdBtnPerform.setEnabled(true);
 					rdBtnPersuasion.setEnabled(true);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					rdbtnSlightOfHand.setEnabled(true);
 					rdbtnStealth.setEnabled(true);
 					rdbtnSurvival.setEnabled(true);
@@ -564,7 +564,7 @@ public class page {
 					rdBtnPerception.setEnabled(false);
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					rdbtnSlightOfHand.setEnabled(false);
 					rdbtnStealth.setEnabled(false);
 					rdbtnSurvival.setEnabled(false);
@@ -585,7 +585,7 @@ public class page {
 					rdBtnPerception.setEnabled(true);
 					rdBtnPerform.setEnabled(false);
 					rdBtnPersuasion.setEnabled(false);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					rdbtnSlightOfHand.setEnabled(false);
 					rdbtnStealth.setEnabled(false);
 					rdbtnSurvival.setEnabled(true);
@@ -607,7 +607,7 @@ public class page {
 					rdBtnAthletics.setEnabled(true);
 					rdBtnHistory.setEnabled(true);
 					rdBtnInsight.setEnabled(true);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					rdbtnStealth.setEnabled(true);
 					choose[0] = 2;
 					break;
@@ -617,7 +617,7 @@ public class page {
 					rdBtnIntimidation.setEnabled(true);
 					rdBtnMedicine.setEnabled(true);
 					rdBtnPersuasion.setEnabled(true);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Ranger":
@@ -648,7 +648,7 @@ public class page {
 					rdBtnInsight.setEnabled(true);
 					rdBtnIntimidation.setEnabled(true);
 					rdBtnPersuasion.setEnabled(true);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
 					choose[0] = 2;
 					break;
 				case "Warlock":
@@ -658,7 +658,21 @@ public class page {
 					rdBtnIntimidation.setEnabled(true);
 					rdBtnInvestigation.setEnabled(true);
 					rdBtnNature.setEnabled(true);
-					rdbtnReligion.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				case "Wizard":
+					rdBtnArcana.setEnabled(true);
+					rdBtnHistory.setEnabled(true);
+					rdBtnInsight.setEnabled(true);
+					rdBtnInvestigation.setEnabled(true);
+					rdBtnMedicine.setEnabled(true);
+					rdBtnReligion.setEnabled(true);
+					choose[0] = 2;
+					break;
+				default:
+					choose[0] = 0;
+					break;
 				}
 			}
 		});
