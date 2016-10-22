@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.Arrays;
 import java.awt.event.ActionEvent;
 
 public class page {
@@ -46,43 +47,36 @@ public class page {
 		
 		JPanel panel_2 = new JPanel();
 		tabbedPane.addTab("Character", null, panel_2, null);
-		SpringLayout sl_panel_2 = new SpringLayout();
-		panel_2.setLayout(sl_panel_2);
+		panel_2.setLayout(null);
 		
 		txtName = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, txtName, 10, SpringLayout.NORTH, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.WEST, txtName, 10, SpringLayout.WEST, panel_2);
+		txtName.setBounds(10, 10, 157, 20);
 		panel_2.add(txtName);
 		txtName.setColumns(10);
 		
 		JLabel lblName = new JLabel("Name");
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblName, -1, SpringLayout.NORTH, txtName);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblName, 6, SpringLayout.EAST, txtName);
-		sl_panel_2.putConstraint(SpringLayout.EAST, lblName, 52, SpringLayout.EAST, txtName);
+		lblName.setBounds(177, 9, 46, 19);
 		lblName.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblName);
 		
 		JComboBox classCombo = new JComboBox();
-		sl_panel_2.putConstraint(SpringLayout.EAST, classCombo, 0, SpringLayout.EAST, txtName);
+		classCombo.setBounds(10, 36, 135, 20);
 		classCombo.setToolTipText("Choose a race");
-		sl_panel_2.putConstraint(SpringLayout.NORTH, classCombo, 6, SpringLayout.SOUTH, txtName);
-		sl_panel_2.putConstraint(SpringLayout.WEST, classCombo, 10, SpringLayout.WEST, panel_2);
 		classCombo.setModel(new DefaultComboBoxModel(new String[] {"   ","Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"}));
 		panel_2.add(classCombo);
 		
 		JLabel lblAlignment = new JLabel("Choose Alignment");
+		lblAlignment.setBounds(489, 9, 116, 19);
 		lblAlignment.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
 		JComboBox combo1 = new JComboBox();
+		combo1.setBounds(279, 10, 95, 20);
 		combo1.setModel(new DefaultComboBoxModel(new String[] {"--Ideals","Lawful", "Neutral", "Chaotic"}));
-		sl_panel_2.putConstraint(SpringLayout.NORTH, combo1, 0, SpringLayout.NORTH, txtName);
-		sl_panel_2.putConstraint(SpringLayout.WEST, combo1, 6, SpringLayout.EAST, lblName);
 		panel_2.add(combo1);
 		
 		JComboBox combo2 = new JComboBox();
+		combo2.setBounds(384, 10, 95, 20);
 		combo2.setModel(new DefaultComboBoxModel(new String[] {"--Morals","Good", "Neutral", "Evil"}));
-		sl_panel_2.putConstraint(SpringLayout.NORTH, combo2, 0, SpringLayout.NORTH, txtName);
-		sl_panel_2.putConstraint(SpringLayout.WEST, combo2, 6, SpringLayout.EAST, combo1);
 		panel_2.add(combo2);
 		
 		combo1.addActionListener(new ActionListener() {
@@ -102,7 +96,7 @@ public class page {
 		combo2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String id = (String) combo1.getSelectedItem();
-				String al = (String)combo2.getSelectedItem();
+				String al = (String) combo2.getSelectedItem();
 				if(!al.equals("--Morals") && !id.equals("--Ideals")){
 					if(al.equals("Neutral") && id.equals("Neutral"))
 						id = "True";
@@ -113,14 +107,11 @@ public class page {
 				}
 			}
 		});
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblAlignment, 10, SpringLayout.NORTH, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblAlignment, 6, SpringLayout.EAST, combo2);
 		panel_2.add(lblAlignment);
 		
 		
 		JLabel lblClass = new JLabel("Class");
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblClass, -1, SpringLayout.NORTH, classCombo);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblClass, 0, SpringLayout.WEST, lblName);
+		lblClass.setBounds(155, 35, 33, 19);
 		lblClass.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblClass);
 		
@@ -139,96 +130,74 @@ public class page {
 		DefaultComboBoxModel tie = new DefaultComboBoxModel(new String[] {"N/A"});
 		
 		JComboBox subCombo = new JComboBox();
+		subCombo.setBounds(10, 62, 135, 20);
 		subCombo.setModel(def);
-		sl_panel_2.putConstraint(SpringLayout.NORTH, subCombo, 6, SpringLayout.SOUTH, classCombo);
-		sl_panel_2.putConstraint(SpringLayout.WEST, subCombo, 0, SpringLayout.WEST, txtName);
 		panel_2.add(subCombo);
 		
 		JLabel lblSubclass = new JLabel("Subclass");
-		sl_panel_2.putConstraint(SpringLayout.EAST, subCombo, -6, SpringLayout.WEST, lblSubclass);
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblSubclass, 6, SpringLayout.SOUTH, lblClass);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblSubclass, 0, SpringLayout.WEST, lblName);
+		lblSubclass.setBounds(157, 61, 55, 19);
 		lblSubclass.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblSubclass);
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setLineWrap(true);
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textArea, -126, SpringLayout.SOUTH, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.WEST, textArea, 10, SpringLayout.WEST, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, textArea, -10, SpringLayout.SOUTH, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.EAST, textArea, 68, SpringLayout.EAST, lblAlignment);
 		
 		JScrollPane scrollBar = new JScrollPane(textArea);
-		sl_panel_2.putConstraint(SpringLayout.NORTH, scrollBar, 0, SpringLayout.NORTH, textArea);
-		sl_panel_2.putConstraint(SpringLayout.WEST, scrollBar, 10, SpringLayout.WEST, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, scrollBar, -10, SpringLayout.SOUTH, panel_2);
-		sl_panel_2.putConstraint(SpringLayout.EAST, scrollBar, -89, SpringLayout.EAST, textArea);
+		scrollBar.setBounds(10, 273, 377, 116);
 		panel_2.add(scrollBar);
 		
 		JLabel lblCharacter = new JLabel("Character Biography");
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblCharacter, 11, SpringLayout.EAST, scrollBar);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, lblCharacter, -58, SpringLayout.SOUTH, panel_2);
+		lblCharacter.setBounds(398, 320, 150, 21);
 		lblCharacter.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		panel_2.add(lblCharacter);
 		
 		textField = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textField, 40, SpringLayout.SOUTH, subCombo);
-		sl_panel_2.putConstraint(SpringLayout.EAST, textField, 0, SpringLayout.EAST, txtName);
+		textField.setBounds(10, 122, 86, 20);
 		panel_2.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textField_1, 6, SpringLayout.SOUTH, textField);
-		sl_panel_2.putConstraint(SpringLayout.EAST, textField_1, 0, SpringLayout.EAST, txtName);
+		textField_1.setBounds(10, 148, 86, 20);
 		panel_2.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textField_2, 6, SpringLayout.SOUTH, textField_1);
-		sl_panel_2.putConstraint(SpringLayout.WEST, textField_2, 0, SpringLayout.WEST, txtName);
+		textField_2.setBounds(10, 174, 86, 20);
 		panel_2.add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textField_3, 6, SpringLayout.SOUTH, textField_2);
-		sl_panel_2.putConstraint(SpringLayout.WEST, textField_3, 0, SpringLayout.WEST, txtName);
+		textField_3.setBounds(10, 200, 86, 20);
 		panel_2.add(textField_3);
 		textField_3.setColumns(10);
 		
 		JLabel lblEyeColor = new JLabel("Eye Color");
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblEyeColor, 0, SpringLayout.WEST, lblName);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, lblEyeColor, 0, SpringLayout.SOUTH, textField);
+		lblEyeColor.setBounds(102, 123, 61, 19);
 		lblEyeColor.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblEyeColor);
 		
 		JLabel lblHairColor = new JLabel("Hair Color");
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblHairColor, 0, SpringLayout.WEST, lblName);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, lblHairColor, 0, SpringLayout.SOUTH, textField_1);
+		lblHairColor.setBounds(102, 149, 62, 19);
 		lblHairColor.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblHairColor);
 		
 		JLabel lblSkinColor = new JLabel("Skin Color");
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblSkinColor, -19, SpringLayout.SOUTH, textField_2);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblSkinColor, 6, SpringLayout.EAST, textField_2);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, lblSkinColor, 0, SpringLayout.SOUTH, textField_2);
+		lblSkinColor.setBounds(102, 175, 62, 19);
 		lblSkinColor.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblSkinColor);
 		
 		JLabel lblHeight = new JLabel("Height");
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblHeight, 0, SpringLayout.WEST, lblName);
-		sl_panel_2.putConstraint(SpringLayout.SOUTH, lblHeight, 0, SpringLayout.SOUTH, textField_3);
+		lblHeight.setBounds(102, 201, 41, 19);
 		lblHeight.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblHeight);
 		
 		JLabel lblWeight = new JLabel("Weight");
-		sl_panel_2.putConstraint(SpringLayout.NORTH, lblWeight, 6, SpringLayout.SOUTH, lblHeight);
-		sl_panel_2.putConstraint(SpringLayout.WEST, lblWeight, 0, SpringLayout.WEST, lblName);
+		lblWeight.setBounds(102, 226, 45, 19);
 		lblWeight.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		panel_2.add(lblWeight);
 		
 		textField_4 = new JTextField();
-		sl_panel_2.putConstraint(SpringLayout.NORTH, textField_4, 6, SpringLayout.SOUTH, textField_3);
-		sl_panel_2.putConstraint(SpringLayout.WEST, textField_4, 0, SpringLayout.WEST, txtName);
+		textField_4.setBounds(10, 226, 86, 20);
 		textField_4.setColumns(10);
 		panel_2.add(textField_4);
 		
@@ -269,32 +238,455 @@ public class page {
 			}
 		});
 		
+		final int[] att = new int[8], pts = new int[1];
+		pts[0] = 27;
+		Arrays.fill(att, 8);
+		
+		
 		JPanel panel_3 = new JPanel();
 		tabbedPane.addTab("Attributes", null, panel_3, null);
 		panel_3.setLayout(null);
 		
-		int str = 0, dex, con, intl, wis, chr, pts = 47;
-		
 		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textPane.setEditable(false);
-		textPane.setText(Integer.toString(str));
-		textPane.setBounds(59, 11, 31, 26);
+		textPane.setText(Integer.toString(att[0]));
+		textPane.setBounds(10, 110, 53, 26);
 		panel_3.add(textPane);
 		
 		JButton btnUp = new JButton("▲");
-		btnUp.addActionListener(new ActionListener() {
+		btnUp.setBounds(10, 84, 53, 28);
+		panel_3.add(btnUp);
+		
+		JButton button_0 = new JButton("▼");
+		button_0.setBounds(10, 135, 53, 26);
+		panel_3.add(button_0);
+		
+		JLabel lblStrength = new JLabel("Strength");
+		lblStrength.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblStrength.setBounds(63, 110, 67, 26);
+		panel_3.add(lblStrength);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setEditable(false);
+		textPane_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1.setText(Integer.toString(pts[0]));
+		textPane_1.setBounds(10, 28, 26, 26);
+		panel_3.add(textPane_1);
+		
+		JLabel lblPointsRemaining = new JLabel("Points Remaining");
+		lblPointsRemaining.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPointsRemaining.setBounds(46, 28, 154, 26);
+		panel_3.add(lblPointsRemaining);
+		
+		JLabel lblDexterity = new JLabel("Dexterity");
+		lblDexterity.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblDexterity.setBounds(193, 110, 67, 26);
+		panel_3.add(lblDexterity);
+		
+		JButton button_1 = new JButton("▲");
+		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnUp.setBounds(89, 11, 50, 26);
-		panel_3.add(btnUp);
+		button_1.setBounds(140, 84, 53, 28);
+		panel_3.add(button_1);
 		
-		JButton button = new JButton("▼");
-		button.setBounds(10, 11, 50, 26);
-		panel_3.add(button);
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setText(Integer.toString(att[1]));
+		textPane_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		textPane_2.setEditable(false);
+		textPane_2.setBounds(140, 110, 53, 26);
+		panel_3.add(textPane_2);
 		
+		JButton button_2 = new JButton("▼");
+		button_2.setBounds(140, 135, 53, 26);
+		panel_3.add(button_2);
+		
+		JLabel lblConstitution = new JLabel("Constitution");
+		lblConstitution.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblConstitution.setBounds(323, 110, 81, 26);
+		panel_3.add(lblConstitution);
+		
+		JButton button_3 = new JButton("▲");
+		button_3.setBounds(270, 84, 53, 28);
+		panel_3.add(button_3);
+		
+		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setText(Integer.toString(att[2]));
+		textPane_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		textPane_3.setEditable(false);
+		textPane_3.setBounds(270, 110, 53, 26);
+		panel_3.add(textPane_3);
+		
+		JButton button_4 = new JButton("▼");
+		button_4.setBounds(270, 135, 53, 26);
+		panel_3.add(button_4);
+		
+		JLabel lblIntelligence = new JLabel("Intelligence");
+		lblIntelligence.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblIntelligence.setBounds(63, 203, 81, 26);
+		panel_3.add(lblIntelligence);
+		
+		JButton button_5 = new JButton("▲");
+		button_5.setBounds(10, 177, 53, 28);
+		panel_3.add(button_5);
+		
+		JTextPane textPane_4 = new JTextPane();
+		textPane_4.setText(Integer.toString(att[3]));
+		textPane_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		textPane_4.setEditable(false);
+		textPane_4.setBounds(10, 203, 53, 26);
+		panel_3.add(textPane_4);
+		
+		JButton button_6 = new JButton("▼");
+		button_6.setBounds(10, 228, 53, 26);
+		panel_3.add(button_6);
+		
+		JButton button_7 = new JButton("▲");
+		button_7.setBounds(140, 177, 53, 28);
+		panel_3.add(button_7);
+		
+		JTextPane textPane_5 = new JTextPane();
+		textPane_5.setText(Integer.toString(att[4]));
+		textPane_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		textPane_5.setEditable(false);
+		textPane_5.setBounds(140, 203, 53, 26);
+		panel_3.add(textPane_5);
+		
+		JButton button_8 = new JButton("▼");
+		button_8.setBounds(140, 228, 53, 26);
+		panel_3.add(button_8);
+		
+		JLabel lblWisdom = new JLabel("Wisdom");
+		lblWisdom.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblWisdom.setBounds(193, 203, 81, 26);
+		panel_3.add(lblWisdom);
+		
+		JButton button_9 = new JButton("▲");
+		button_9.setBounds(270, 177, 53, 28);
+		panel_3.add(button_9);
+		
+		JTextPane textPane_6 = new JTextPane();
+		textPane_6.setText(Integer.toString(att[5]));
+		textPane_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		textPane_6.setEditable(false);
+		textPane_6.setBounds(270, 203, 53, 26);
+		panel_3.add(textPane_6);
+		
+		JButton button_10 = new JButton("▼");
+		button_10.setBounds(270, 228, 53, 26);
+		panel_3.add(button_10);
+		
+		JLabel lblCharisma = new JLabel("Charisma");
+		lblCharisma.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCharisma.setBounds(323, 203, 81, 26);
+		panel_3.add(lblCharisma);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBounds(412, 7, 171, 368);
+		panel_3.add(panel_5);
+		FlowLayout fl_panel_5 = new FlowLayout(FlowLayout.CENTER, 5, 5);
+		panel_5.setLayout(fl_panel_5);
+		
+		JRadioButton rdBtnAcrobatics = new JRadioButton("Acrobatics");
+		rdBtnAcrobatics.setEnabled(false);
+		panel_5.add(rdBtnAcrobatics);
+		
+		JRadioButton rdBtnAnimalH = new JRadioButton("Animal Handling");
+		rdBtnAnimalH.setEnabled(false);
+		panel_5.add(rdBtnAnimalH);
+		
+		JRadioButton rdBtnArcana = new JRadioButton("Arcana");
+		rdBtnArcana.setEnabled(false);
+		panel_5.add(rdBtnArcana);
+		
+		JRadioButton rdBtnAthletics = new JRadioButton("Athletics");
+		rdBtnAthletics.setEnabled(false);
+		panel_5.add(rdBtnAthletics);
+		
+		JRadioButton radioButton_4 = new JRadioButton("Deception");
+		radioButton_4.setEnabled(false);
+		panel_5.add(radioButton_4);
+		
+		JRadioButton radioButton_5 = new JRadioButton("History");
+		radioButton_5.setEnabled(false);
+		panel_5.add(radioButton_5);
+		
+		JRadioButton radioButton_6 = new JRadioButton("Insight");
+		radioButton_6.setEnabled(false);
+		panel_5.add(radioButton_6);
+		
+		JRadioButton radioButton_7 = new JRadioButton("Intimidation");
+		radioButton_7.setEnabled(false);
+		panel_5.add(radioButton_7);
+		
+		JRadioButton radioButton_8 = new JRadioButton("Investigation");
+		radioButton_8.setEnabled(false);
+		panel_5.add(radioButton_8);
+		
+		JRadioButton radioButton_9 = new JRadioButton("Medicine");
+		radioButton_9.setEnabled(false);
+		panel_5.add(radioButton_9);
+		
+		JRadioButton radioButton_10 = new JRadioButton("Nature");
+		radioButton_10.setEnabled(false);
+		panel_5.add(radioButton_10);
+		
+		JRadioButton radioButton_11 = new JRadioButton("Perception");
+		radioButton_11.setEnabled(false);
+		panel_5.add(radioButton_11);
+		
+		JRadioButton radioButton_12 = new JRadioButton("Performance");
+		radioButton_12.setEnabled(false);
+		panel_5.add(radioButton_12);
+		
+		JRadioButton rdbtnPersuasion = new JRadioButton("Persuasion");
+		rdbtnPersuasion.setEnabled(false);
+		panel_5.add(rdbtnPersuasion);
+		
+		JRadioButton rdbtnReligion = new JRadioButton("Religion");
+		rdbtnReligion.setEnabled(false);
+		panel_5.add(rdbtnReligion);
+		
+		JRadioButton rdbtnSlightOfHand = new JRadioButton("Slight of Hand");
+		rdbtnSlightOfHand.setEnabled(false);
+		panel_5.add(rdbtnSlightOfHand);
+		
+		JRadioButton rdbtnStealth = new JRadioButton("Stealth");
+		rdbtnStealth.setEnabled(false);
+		panel_5.add(rdbtnStealth);
+		
+		JRadioButton rdbtnSurvival = new JRadioButton("Survival");
+		rdbtnSurvival.setEnabled(false);
+		panel_5.add(rdbtnSurvival);
+		
+		
+		btnUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[0]<20){
+					if((att[0]+1)<13){
+						ptcost = (att[0]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[0]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[0]++;
+						textPane.setText(Integer.toString(att[0]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+
+		button_0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[0]>8){
+					if((att[0])<13){
+						ptcost = (att[0])-8;
+					}
+					else{
+						ptcost = 5+((att[0])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[0]--;
+					textPane.setText(Integer.toString(att[0]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[1]<20){
+					if((att[1]+1)<13){
+						ptcost = (att[1]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[1]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[1]++;
+						textPane_2.setText(Integer.toString(att[1]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[1]>8){
+					if((att[1])<13){
+						ptcost = (att[1])-8;
+					}
+					else{
+						ptcost = 5+((att[1])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[1]--;
+					textPane_2.setText(Integer.toString(att[1]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[2]<20){
+					if((att[2]+1)<13){
+						ptcost = (att[2]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[2]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[2]++;
+						textPane_3.setText(Integer.toString(att[2]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[2]>8){
+					if((att[2])<13){
+						ptcost = (att[2])-8;
+					}
+					else{
+						ptcost = 5+((att[2])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[2]--;
+					textPane_3.setText(Integer.toString(att[2]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
+
+		button_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[3]<20){
+					if((att[3]+1)<13){
+						ptcost = (att[3]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[3]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[3]++;
+						textPane_4.setText(Integer.toString(att[3]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+		button_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[3]>8){
+					if((att[3])<13){
+						ptcost = (att[3])-8;
+					}
+					else{
+						ptcost = 5+((att[3])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[3]--;
+					textPane_4.setText(Integer.toString(att[3]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
+
+		button_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[4]<20){
+					if((att[4]+1)<13){
+						ptcost = (att[4]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[4]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[4]++;
+						textPane_5.setText(Integer.toString(att[4]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+		button_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[4]>8){
+					if((att[4])<13){
+						ptcost = (att[4])-8;
+					}
+					else{
+						ptcost = 5+((att[4])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[4]--;
+					textPane_5.setText(Integer.toString(att[4]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
+
+		button_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[5]<20){
+					if((att[5]+1)<13){
+						ptcost = (att[5]+1)-8;
+					}
+					else{
+						ptcost = 5+((att[5]+1)-13)*2;
+					}
+					if(pts[0]>=ptcost){
+						pts[0]-=ptcost;
+						att[5]++;
+						textPane_6.setText(Integer.toString(att[5]));
+						textPane_1.setText(Integer.toString(pts[0]));
+					}
+				}
+			}
+		});
+		button_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int ptcost = 0;
+				if(att[5]>8){
+					if((att[5])<13){
+						ptcost = (att[5])-8;
+					}
+					else{
+						ptcost = 5+((att[5])-13)*2;
+					}
+					pts[0]+=ptcost;
+					att[5]--;
+					textPane_6.setText(Integer.toString(att[5]));
+					textPane_1.setText(Integer.toString(pts[0]));
+				}
+			}
+		});
 		JPanel panel_4 = new JPanel();
 		tabbedPane.addTab("Details", null, panel_4, null);
+		
+		
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
