@@ -18,7 +18,7 @@ public class Character {
   
   //constructor
   public Character(String char_class, String race, String name, String eye, String hair, String skin, String weight, 
-                   String biography, String alignment, String backstory, int[5] wealth, int health, 
+                   String biography, String alignment, String backstory, int[] wealth, int health, 
                    ArrayList<String> skills) {
     this.name = name;
     this.char_class=char_class;
@@ -42,7 +42,7 @@ public class Character {
       inventory.add(new ArrayList<String>());
     }
     for(int i=0; i<5;i++){
-      this.wealth[i]=0
+      this.wealth[i]=0;
     }
   }
   //load
@@ -62,6 +62,7 @@ public class Character {
       this.hair = br.readLine();
       this.skin = br.readLine();
       this.alignment = br.readLine();
+      this.backstory = br.readLine();
       this.level=Integer.parseInt(br.readLine());
       this.strength= Integer.parseInt(br.readLine());
       this.dexterity=Integer.parseInt(br.readLine());
@@ -69,12 +70,17 @@ public class Character {
       this.intelligence=Integer.parseInt(br.readLine());
       this.wisdom=Integer.parseInt(br.readLine());
       this.charisma=Integer.parseInt(br.readLine());
+      this.health= Integer.parseInt(br.readLine());
       for(int i = 0; i<6;i++){
       while ((line=br.readLine())!="\n")
       {
         inventory.get(index).add(line);
       }
       index++;
+      }
+      for(int i=0;i<5;i++)
+      {
+        this.wealth[i]=Integer.parseInt(br.readLine());
       }
       while ((line=br.readLine())!=null)
       {
@@ -103,6 +109,7 @@ public class Character {
     outFile.println(this.hair);
     outFile.println(this.skin);
     outFile.println(this.alignment);
+    outFile.println(this.backstory);
     outFile.println(this.level);
     outFile.println(this.strength);
     outFile.println(this.dexterity);
@@ -110,11 +117,15 @@ public class Character {
     outFile.println(this.intelligence);
     outFile.println(this.wisdom);
     outFile.println(this.charisma);
+    outFile.println(this.health);
     for(int i=0;i<6;i++){
-      for(int j=0; j<inventory.get(i).size(); j++){
-        outFile.println(inventory.get(i).get(j));
+      for(int j=0; j<this.inventory.get(i).size(); j++){
+        outFile.println(this.inventory.get(i).get(j));
       }
       outFile.println();
+    }
+    for(int i=0;i<5;i++){
+      outFile.println(this.wealth[i]);
     }
     outFile.println(this.biography);
     outFile.close();
@@ -171,6 +182,16 @@ public class Character {
   public String get_alignment(){
     return alignment;
   }
+  public int[] get_wealth(){
+    return wealth;
+  }
+  public int get_health(){
+    return health;
+  }
+  public String get_backstory(){
+    return backstory;
+  }
+  
   //Setters
   public void set_inventory(ArrayList<ArrayList<String>> inventory){
     this.inventory = inventory;
@@ -223,5 +244,14 @@ public class Character {
   public void set_alignment(String alignment){
     this.alignment= alignment;
   }
-  
+  public void set_wealth(int[] wealth){
+    if(wealth.length==5)
+      this.wealth=wealth;
   }
+  public void set_health(int health){
+    this.health=health;
+  }
+  public void set_backstory(String backstory){
+    this.backstory = backstory;
+  }
+}
