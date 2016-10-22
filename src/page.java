@@ -277,12 +277,20 @@ public class page {
 		
 		JTextPane textPane = new JTextPane();
 		textPane.setEditable(false);
-		textPane.setBounds(10, 11, 31, 26);
+		textPane.setBounds(59, 11, 31, 26);
 		panel_3.add(textPane);
 		
-		JSlider slider = new JSlider();
-		slider.setBounds(41, 11, 200, 26);
-		panel_3.add(slider);
+		JButton btnUp = new JButton("▲");
+		btnUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnUp.setBounds(89, 11, 50, 26);
+		panel_3.add(btnUp);
+		
+		JButton button = new JButton("\u25B2");
+		button.setBounds(10, 11, 50, 26);
+		panel_3.add(button);
 		
 		JPanel panel_4 = new JPanel();
 		tabbedPane.addTab("Details", null, panel_4, null);
