@@ -15,27 +15,25 @@ public class Character {
   private String race, char_class, name, eye, hair, skin, height, weight, biography, alignment, backstory;
   private int level, strength, dexterity, constitution, intelligence, wisdom, charisma, health;
   ArrayList<ArrayList<String>> inventory = new ArrayList<ArrayList<String>>();
-  //ArrayList[] inventory = new ArrayList[6];
   ArrayList<String> skills = new ArrayList<String>();
   int[] wealth= new int[5];
   FileInputStream in = null;
   
   //constructor
-  public Character(String char_class, String race, String name, String eye, String hair, String skin,String height, String weight, 
-                   String biography, String alignment, int[] wealth, int health, 
-                   ArrayList<String> skills) {
-    this.name = name;
-    this.char_class=char_class;
-    this.race= race;
-    this.eye = eye;
-    this.hair = hair;
-    this.skin = skin;
-    this.height = height;
-    this.weight = weight;
-    this.biography = biography;
-    this.alignment = alignment;
-    //this.backstory = backstory;
-    this.health = health;
+  
+  public Character() {
+    this.name = "";
+    this.char_class="";
+    this.race= "";
+    this.eye = "";
+    this.hair = "";
+    this.skin = "";
+    this.height = "";
+    this.weight = "";
+    this.biography = "";
+    this.alignment = "";
+    this.backstory = "";
+    this.health = 0;
     level = 1;
     strength = 8;
     dexterity = 8;
@@ -69,7 +67,7 @@ public class Character {
       this.height = br.readLine();
       this.weight = br.readLine();
       this.alignment = br.readLine();
-      //this.backstory = br.readLine();
+      this.backstory = br.readLine();
       this.level=Integer.parseInt(br.readLine());
       this.strength= Integer.parseInt(br.readLine());
       this.dexterity=Integer.parseInt(br.readLine());
@@ -118,7 +116,7 @@ public class Character {
     outFile.println(this.height);
     outFile.println(this.weight);
     outFile.println(this.alignment);
-    //outFile.println(this.backstory);
+    outFile.println(this.backstory);
     outFile.println(this.level);
     outFile.println(this.strength);
     outFile.println(this.dexterity);
