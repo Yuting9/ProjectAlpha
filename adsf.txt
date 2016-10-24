@@ -1,0 +1,23 @@
+adsf
+Barbarian
+Dark Elf
+
+
+
+
+
+True Neutral
+1
+8
+8
+8
+8
+8
+8
+20
+0
+0
+0
+0
+0
+

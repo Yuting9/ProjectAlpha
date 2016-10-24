@@ -1,0 +1,23 @@
+cancer
+Bard
+Hill Dwarf
+Noepe
+
+
+
+
+Lawful Evil
+1
+8
+8
+8
+8
+8
+8
+20
+0
+0
+0
+0
+0
+

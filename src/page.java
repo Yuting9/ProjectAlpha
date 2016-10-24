@@ -27,6 +27,7 @@ public class page {
 		final String ideal = "--Ideals", align = "--Morals";
 		
 		JFrame frame = new JFrame();
+		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.setSize(700, 500);
 		JPanel panel = new JPanel();
@@ -5233,10 +5234,10 @@ public class page {
 				int ptcost = 0;
 				if(att[0]<20){
 					if((att[0]+1)<13){
-						ptcost = (att[0]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[0]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5253,10 +5254,10 @@ public class page {
 				int ptcost = 0;
 				if(att[0]>8){
 					if((att[0])<13){
-						ptcost = (att[0])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[0])-13)*2;
+						ptcost = 2;;
 					}
 					pts[0]+=ptcost;
 					att[0]--;
@@ -5270,10 +5271,10 @@ public class page {
 				int ptcost = 0;
 				if(att[1]<20){
 					if((att[1]+1)<13){
-						ptcost = (att[1]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[1]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5290,10 +5291,10 @@ public class page {
 				int ptcost = 0;
 				if(att[1]>8){
 					if((att[1])<13){
-						ptcost = (att[1])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[1])-13)*2;
+						ptcost = 2;
 					}
 					pts[0]+=ptcost;
 					att[1]--;
@@ -5307,10 +5308,10 @@ public class page {
 				int ptcost = 0;
 				if(att[2]<20){
 					if((att[2]+1)<13){
-						ptcost = (att[2]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[2]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5326,10 +5327,10 @@ public class page {
 				int ptcost = 0;
 				if(att[2]>8){
 					if((att[2])<13){
-						ptcost = (att[2])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[2])-13)*2;
+						ptcost = 2;
 					}
 					pts[0]+=ptcost;
 					att[2]--;
@@ -5344,10 +5345,10 @@ public class page {
 				int ptcost = 0;
 				if(att[3]<20){
 					if((att[3]+1)<13){
-						ptcost = (att[3]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[3]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5363,10 +5364,10 @@ public class page {
 				int ptcost = 0;
 				if(att[3]>8){
 					if((att[3])<13){
-						ptcost = (att[3])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[3])-13)*2;
+						ptcost = 2;
 					}
 					pts[0]+=ptcost;
 					att[3]--;
@@ -5381,10 +5382,10 @@ public class page {
 				int ptcost = 0;
 				if(att[4]<20){
 					if((att[4]+1)<13){
-						ptcost = (att[4]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[4]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5400,10 +5401,10 @@ public class page {
 				int ptcost = 0;
 				if(att[4]>8){
 					if((att[4])<13){
-						ptcost = (att[4])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[4])-13)*2;
+						ptcost = 2;
 					}
 					pts[0]+=ptcost;
 					att[4]--;
@@ -5418,10 +5419,10 @@ public class page {
 				int ptcost = 0;
 				if(att[5]<20){
 					if((att[5]+1)<13){
-						ptcost = (att[5]+1)-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[5]+1)-13)*2;
+						ptcost = 2;
 					}
 					if(pts[0]>=ptcost){
 						pts[0]-=ptcost;
@@ -5437,10 +5438,10 @@ public class page {
 				int ptcost = 0;
 				if(att[5]>8){
 					if((att[5])<13){
-						ptcost = (att[5])-8;
+						ptcost = 1;
 					}
 					else{
-						ptcost = 5+((att[5])-13)*2;
+						ptcost = 2;
 					}
 					pts[0]+=ptcost;
 					att[5]--;
@@ -5491,7 +5492,18 @@ public class page {
 			skills.add(rdBtnSurvival.getText());
 		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Character chract = new Character(comboBox.getSelectedItem(), subCombo.getSelectedItem(), txtName.getText(), textField.getText(), textField_1.getText(), textField_2.getText(), textField_3.getText(), textField_4.getText(), textArea.getText(), lblAlignment.getText(), [textField_9.getText(),textField_8.getText(),textField_7.getText(),textField_6.getText(),textField_5.getText()], skills);
+				Character chract = new Character((String)comboBox.getSelectedItem(), (String)subCombo.getSelectedItem(), txtName.getText(), textField.getText(), textField_1.getText(), textField_2.getText(), textField_3.getText(), textField_4.getText(), textArea.getText(), lblAlignment.getText(), new int[] {Integer.parseInt(textField_9.getText()),Integer.parseInt(textField_8.getText()),Integer.parseInt(textField_7.getText()),Integer.parseInt(textField_6.getText()),Integer.parseInt(textField_5.getText())},20, skills);
+				chract.save(chract.get_name());
+				Character news = new Character(txtName.getText());
+				System.out.println(news.get_class());
+				news.set_strength(Integer.parseInt(textPane.getText()));
+				news.set_dexterity(Integer.parseInt(textPane_1.getText()));
+				news.set_constitution(Integer.parseInt(textPane_2.getText()));
+				news.set_intellgience(Integer.parseInt(textPane_3.getText()));
+				news.set_wisdom(Integer.parseInt(textPane_4.getText()));
+				news.set_charisma(Integer.parseInt(textPane_5.getText()));
+				news.set_name("Ganashsai_Vannithamby");
+				news.save(news.get_name());
 			}
 		});
 		

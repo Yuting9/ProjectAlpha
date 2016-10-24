@@ -77,14 +77,14 @@ public class Character {
       this.intelligence=Integer.parseInt(br.readLine());
       this.wisdom=Integer.parseInt(br.readLine());
       this.charisma=Integer.parseInt(br.readLine());
-      this.health= Integer.parseInt(br.readLine());
+      this.health= Integer.parseInt(br.readLine());/*
       for(int i = 0; i<6;i++){
       while ((line=br.readLine())!="\n")
       {
         inventory.get(index).add(line);
       }
       index++;
-      }
+      }*/
       for(int i=0;i<5;i++)
       {
         this.wealth[i]=Integer.parseInt(br.readLine());
@@ -126,13 +126,13 @@ public class Character {
     outFile.println(this.intelligence);
     outFile.println(this.wisdom);
     outFile.println(this.charisma);
-    outFile.println(this.health);
+    outFile.println(this.health);/*
     for(int i=0;i<6;i++){
       for(int j=0; j<this.inventory.get(i).size(); j++){
         outFile.println(this.inventory.get(i).get(j));
       }
       outFile.println();
-    }
+    }*/
     for(int i=0;i<5;i++){
       outFile.println(this.wealth[i]);
     }
